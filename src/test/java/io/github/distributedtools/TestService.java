@@ -1,5 +1,6 @@
 package io.github.distributedtools;
 
+import io.github.distributedtools.annotation.Cacheable;
 import io.github.distributedtools.annotation.DLock;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,16 @@ public class TestService {
         //}
         return "success";
     }
+
+
+    @Cacheable(value = "cache-name",key = "#param",expire = 200)
+    public String getValueE(String param) throws Exception {
+      //  if ("sleep".equals(param)) {//线程休眠或者断点阻塞，达到一直占用锁的测试效
+        //}
+        System.out.println("entry");
+        return "success";
+    }
+
 
 
 }

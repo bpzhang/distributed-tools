@@ -32,5 +32,8 @@ public class LockTest {
         }));
         executorService.awaitTermination(30, TimeUnit.SECONDS);
     }
-
+    @Test
+    public void setTestService() throws Exception {
+        testService.getValueE("getValueE");
+    }
 }
