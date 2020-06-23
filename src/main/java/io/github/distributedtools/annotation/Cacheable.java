@@ -1,6 +1,5 @@
 package io.github.distributedtools.annotation;
 
-import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.Documented;
